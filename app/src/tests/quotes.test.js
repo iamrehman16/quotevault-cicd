@@ -10,7 +10,7 @@ describe("Quote API", () => {
   test("GET /health returns healthy message", async () => {
     const response = await request(app).get("/health");
 
-    expect(response.status).toBe(999); // wrong status
+    expect(response.status).toBe(200);
     expect(response.body).toEqual({ message: "Server is healthy" });
   });
 
